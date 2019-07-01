@@ -5,7 +5,7 @@
 # Description : SCP from Client to Remote Server.
 
 readonly USR=ubuntu
-readonly HOST=13.126.42.22 #ec2-13-126-42-22.ap-south-1.compute.amazonaws.com
+readonly HOST=1.2.3.4 #ec2-1-2-3-4.ap-south-1.compute.amazonaws.com
 readonly PORT=22
 readonly PEM=webapp.pem
 
