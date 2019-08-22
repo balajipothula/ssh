@@ -42,3 +42,22 @@ then
 else
     echo "NO, your arr does not contain $SEARCH_STRING"
 fi
+
+
+readonly ROCKSPEC_FILE="/kong-plugin/factset-plugins-0.3.0-0.rockspec"
+readonly PATTREN='\["'
+
+while read -r line ; do
+  output=$(echo $line | cut -d '=' -f 2)
+  echo $output
+done < <(grep $PATTREN $ROCKSPEC_FILE)
+
+
+
+
+
+
+
+
+
+
