@@ -44,7 +44,7 @@ else
 fi
 
 
-readonly ROCKSPEC_FILE="/kong-plugin/factset-plugins-0.3.0-0.rockspec"
+readonly ROCKSPEC_FILE="/kong-plugin/plugins-0.3.0-0.rockspec"
 readonly PATTREN='\["'
 
 while read -r line ; do
