@@ -2,6 +2,13 @@
 
 # run ./ls_dir.sh or bash ls_dir.sh only not sh ls_dir.sh
 
+readonly domains=($(ls $HOME))
+for domain in "${domains[@]}"; do
+  if [ -d $domain ]; then
+    echo $domain
+  fi
+done
+
 dirs=$(ls -l --time-style='long-iso' $HOME | egrep '^d' | awk '{print $8}')
 
 for dir in $dirs; do
