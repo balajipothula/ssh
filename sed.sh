@@ -4,6 +4,23 @@
 # Date        : 15 December 2019,
 # Description : sed Help.
 
+dirs=$(ls /home/ubuntu)
+
+for dir in $dirs; do
+  files=$(find "/home/home/$dir" -name "hi*")
+  for file in $files; do
+    coll=$(basename $file)
+    coll=$(echo $coll | sed -e "s/.xml//g")
+    coll=$(echo $coll | sed -e "s/.json//g")
+    coll=$(echo $coll | sed -e "s/.txt//g")
+    echo $coll
+  done
+done
+
+
+
+find /home/ubuntu/ -type f -name hi* | sed -e "s/.json//g" | sed -e "s/.xml//g
+
 cat /etc/passwd | sed '1d' | more
 
 cat /etc/passwd | sed '1, 5d' | more
