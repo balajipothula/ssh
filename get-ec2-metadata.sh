@@ -51,6 +51,7 @@ readonly                 vpc_id=$(curl --silent http://169.254.169.254/latest/me
 readonly    vpc_ipv4_cidr_block=$(curl --silent http://169.254.169.254/latest/meta-data/network/interfaces/macs/$(curl --silent http://169.254.169.254/latest/meta-data/network/interfaces/macs)/vpc-ipv4-cidr-block)
 readonly   vpc_ipv4_cidr_blocks=$(curl --silent http://169.254.169.254/latest/meta-data/network/interfaces/macs/$(curl --silent http://169.254.169.254/latest/meta-data/network/interfaces/macs)/vpc-ipv4-cidr-blocks)
 
+readonly                 region=$(curl --silent http://169.254.169.254/latest/meta-data/placement/region)
 readonly      availability_zone=$(curl --silent http://169.254.169.254/latest/meta-data/placement/availability-zone)
 readonly     ailability_zone_id=$(curl --silent http://169.254.169.254/latest/meta-data/placement/availability-zone-id)
 
@@ -105,6 +106,7 @@ echo "VPC ID                 : $vpc_id"
 echo "VPC IPv4 CIDR Block    : $vpc_ipv4_cidr_block"
 echo "VPC IPv4 CIDR Blocks   : $vpc_ipv4_cidr_blocks"
 
+echo "Region                 : $region"
 echo "Availability Zone      : $availability_zone"
 echo "Availability Zone ID   : $ailability_zone_id"
 
